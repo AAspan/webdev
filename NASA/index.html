@@ -1,0 +1,51 @@
+<html>
+<head>
+  <title>Spaniol Project</title>
+  <link href="https://fonts.googleapis.com/css?family=Nunito:400,600,700" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <header>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="pages/locations.html">Locations</a></li>
+        <li><a href="pages/contact.html">Contact</a></li>
+          </ul>
+    </nav>
+  </header>
+
+  <div id="login_div" class="main-div">
+    <h3>NASA Gallery Log In</h3>
+    <input type="email" placeholder="Email..." id="email_field" />
+    <input type="password" placeholder="Password..." id="password_field" />
+
+    <button onclick="login()">Login to Account</button>
+  </div>
+
+  <div id="user_div" class="loggedin-div">
+    <h3>Welcome User</h3>
+    <p id="user_para">Welcome to Firebase web login Example. You're currently logged in.</p>
+    <button onclick="logout()">Logout</button>
+  </div>
+
+
+
+  <script src="https://www.gstatic.com/firebasejs/4.8.1/firebase.js"></script>
+  <script>
+    // Initialize Firebase
+    var config = {
+    apiKey: "AIzaSyAvrqh9dvl-kcG42heaUf4B132qDJLMHCM",
+    authDomain: "nasa-3c621.firebaseapp.com",
+    projectId: "nasa-3c621",
+    storageBucket: "nasa-3c621.appspot.com",
+    messagingSenderId: "560340640511",
+    appId: "1:560340640511:web:e391257fbfe04d9589e2ca",
+    measurementId: "G-RH6N2D944J"
+    };
+    firebase.initializeApp(config);
+  </script>
+  <script src="index.js"></script>
+
+</body>
+</html>

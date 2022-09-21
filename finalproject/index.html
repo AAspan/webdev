@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <script src="javascript.js"></script>
+    <link rel="stylesheet" href="style.css">
+
+    <script src="https://www.gstatic.com/firebasejs/4.8.2/firebase.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/4.8.2/firebase-auth.js"></script>
+
+    
+    <title>Document</title>
+</head>
+
+<body>
+    <button class="tablink" onclick="openPage('Home', this, 'grey')">Home</button>
+    <button class="tablink" onclick="openPage('News', this, 'grey')" id="defaultOpen">Description</button>
+    <button class="tablink" onclick="openPage('Contact', this, 'grey')">Checklist</button>
+    <button class="tablink" onclick="openPage('About', this, 'grey')">About</button>
+    <button class="tablink" onclick="openPage('Account', this, 'grey')">Acount</button>
+
+
+<div id="Home" class="tabcontent">
+  <h3>Welcome to Cesar Spaniol's Page!</h3>
+  <p>In this website you can see the best pictures of space with high resolution. </p>
+  <p>view the images individually, as pairs and quadruples! </p>
+  <p>Click the menu options to navigate through the website</p>
+  <h3>To log out  please go to account</h3>
+<!-- Header -->
+<div class="head" id="myHea">
+    <h1>Space Images Grid</h1>
+    <p>Change grid view.</p>
+    <button class="btn" onclick="one()">1 image view </button>
+    <button class="btn active" onclick="two()">2 images view</button>
+    <button class="btn" onclick="four()">4 images view</button>
+  </div>
+  
+  <!-- Photo Grid -->
+  <div class="row"> 
+    <div class="column">
+      <img src="images/1.jpg" style="width:100%">
+      <img src="images/2.jpg" style="width:100%">
+      <img src="images/3.jpg" style="width:100%">
+      <img src="images/4.jpg" style="width:100%">
+      <img src="images/5.jpg" style="width:100%">
+      <img src="images/6.jpg" style="width:100%">
+      <img src="images/7.jpg" style="width:100%">
+    </div>
+    <div class="column">
+      <img src="images/8.jpg" style="width:100%">
+      <img src="images/9.jpg" style="width:100%">
+      <img src="images/10.jpg" style="width:100%">
+      <img src="images/11.jpg" style="width:100%">
+      <img src="images/12.jpg" style="width:100%">
+      <img src="images/13.jpg" style="width:100%">
+    </div>  
+    <div class="column">
+      <img src="images/14.jpg" style="width:100%">
+      <img src="images/15.jpg" style="width:100%">
+      <img src="images/16.jpg" style="width:100%">
+      <img src="images/17.jpg" style="width:100%">
+      <img src="images/18.jpg" style="width:100%">
+      <img src="images/19.jpg" style="width:100%">
+      <img src="images/20.jpg" style="width:100%">
+    </div>
+    <div class="column">
+      <img src="images/21.jpg" style="width:100%">
+      <img src="images/22.jpg" style="width:100%">
+      <img src="images/23.jpg" style="width:100%">
+      <img src="images/24.jpg" style="width:100%">
+      <img src="images/25.jpg" style="width:100%">
+      <img src="images/26.jpg" style="width:100%">
+    </div>
+  </div>
+</div>
+
+<div id="News" class="tabcontent">
+  <h2>Click for inspirisng space quote.</h2>
+<button onclick="myFunction()">Try it</button>
+<p id="demo"></p>
+
+<h3>Describe who are the users of your site</h3>
+  <p>The users for this site, is anyone who like to see pictures about outer space.</p>
+<h3>What is it that you want your users to get out of using the site</h3>
+  <p>users can see the different ways to design a website and for them to take this an an example.</p>
+<h3>What problem are you trying to solve for the users of the site</h3>
+  <p>users can see how to deisgn different pictures websites.</p>
+<h3>What are the actions that you want the users to take once they have used your site</h3>
+  <p>users can download the pictures. </p>
+  
+</div>
+
+<div id="Contact" class="tabcontent">
+  <p>This website incorporated the following techniques:</p>
+
+  <div>
+    <input type="checkbox" id="scales" name="scales"
+           checked>
+    <label for="scales">Database Usage</label>
+  </div>
+  <div>
+    <input type="checkbox" id="horns" name="horns">
+    <label for="horns">Ajax usage </label>
+  </div>
+  <div>
+    <input type="checkbox" id="horns" name="horns">
+    <label for="horns">Theme </label>
+  </div>
+  <div>
+    <input type="checkbox" id="horns" name="horns">
+    <label for="horns">New Library Usage  </label>
+  </div>
+  <div>
+    <input type="checkbox" id="horns" name="horns">
+    <label for="horns">Javascript Usage  </label>
+  </div>
+  <div>
+    <input type="checkbox" id="horns" name="horns">
+    <label for="horns">Membership Area  </label>
+  </div>
+  <div>
+    <input type="checkbox" id="horns" name="horns">
+    <label for="horns">General User </label>
+  </div>
+
+</div>
+
+<div id="About" class="tabcontent">
+  <h3>Scroll down to see the cards!</h3>
+  <div class="card">
+    <img src="images/img_avatar.png" alt="Avatar" style="width:70%">
+    <div class="container">
+      <h4><b>Cesar Spaniol Ramos</b></h4> 
+      <p>student of Computer Science at GSU.</p> 
+    </div>
+  </div>
+  <div class="card2">
+    <img src="images/ques.png" alt="Avatar" style="width:70%">
+    <div class="container2">
+      <h4><b>Project Description and why you choose this project</b></h4> 
+      <p>This project is about space because it is a topic i am passionate about 
+        due to the fact that we know little about space and the possibilities of it for the future.</p> 
+    </div>
+  </div>
+  <div class="card3">
+    <img src="images/lang.png" alt="Avatar" style="width:70%">
+    <div class="container3">
+      <h4><b>Description of technology used for your site</b></h4> 
+      <p>In this site i used html for the main pages such as home, which is the main html page that contaons all of the html pages within it.
+          The log in page is based on Firebase authentication, it contains javascript code and an API to see the users that log in and make 
+          accounts to this website. 
+          This website also contains an ajax example which shows an inspirational quote. 
+          javascript is the biggest part of this website because it helps with the overall designs. 
+      </p> 
+    </div>
+  </div>
+  <div class="card4">
+    <img src="images/learn.png" alt="Avatar" style="width:70%">
+    <div class="container4">
+      <h4><b>What have you learned in this class</b></h4> 
+      <p>In this class i learned about different ways to implement the languages i learned 
+        like html,css, javascript, php and ajax. I learned to implement my knwoledge of other courses like web APIs
+    and i learned to go about obsatcles from different angles.</p> 
+    </div>
+  </div>
+</div>
+
+<div id="Account" class="tabcontent">
+    <h3>Thank you for visiting the Page:</h3>
+    <div id="main_container" style="display:none;">
+        <button onclick="mainApp.logout();">logout</button>
+</div>
+<script src="fireBase.js"></script>
+<script src="main.js"></script>
+    <h3>Account</h3>
+  </div>
+
+</body>
+</html>

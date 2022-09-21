@@ -1,0 +1,94 @@
+@charset "utf-8";
+/* CSS Document */
+body {
+margin: 0;
+padding: 0;
+border: 2px solid #000000;
+}
+
+header{ text-align:right;
+	border-style: double;
+}
+#myElement {
+            border:1px solid #CCC;
+            width:100px;
+            height:100px;
+        }
+/* Create two equal columns that floats next to each other */
+.column {
+  float: left;
+  width: 30%;
+  padding: 10px;
+  height: 650px; 
+  border-style: double
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+#footer{
+//display: none;
+width: 100%;
+height: 28px;
+position: absolute;
+bottom: 0px;
+padding: 13px 7px 0px 17px;
+font-size: 13px;
+color: #848484;
+background-color: #F2F2F2;
+border-top: 1px solid #E6E6E6;
+}
+.rights{
+        text-align: left;
+}
+.design{
+       position: absolute;
+       right:0;
+       margin-right: 10px;
+}
+
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>WeekTwo</title>
+	<link rel="stylesheet" href="cssstyle.css">
+</head>
+
+<body>
+<header><button type="button" onclick="changeStyle()">Update </button>| <button onclick="myFunction()">Alert</button> </header> 
+<img src="tuscany-landscape-4-1500765.jpg" width="1939" height="142" alt=""/></p>
+
+<div class="row">
+  <div class="column" style="background-color:lightblue;">
+<p><strong> Loren Ipsum</strong> is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+  </div>
+  <div class="column"><div id ="myElement">
+    <h2>Content Page 1</h2>
+  </div>
+</div>
+	
+<div id="footer">
+<span class="rights"><a>20 Cesar Spaniol Ramos, All Rights Reserved</a></span>
+<span class="design"><a>Design by Cesar Spaniol Ramos</a></span></div> 
+<script src="javascript.js" type="text/javascript"></script>
+	<script>
+
+function myFunction() {
+  alert("Alert!!! You are Awesome!");
+}
+</script>
+</body>
+
+  <script>
+    function changeStyle(){
+        var element = document.getElementById("myElement");
+        element.style.fontFamily = "monospace";
+    }
+    </script>
+</div>
+</html>

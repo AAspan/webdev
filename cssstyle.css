@@ -1,0 +1,60 @@
+@charset "utf-8";
+/* CSS Document */
+body {
+margin: 0;
+padding: 0;
+border: 2px solid #000000;
+}
+
+header{ 
+	width: 100%;
+    height: 24px;
+	text-align:right;
+	border-style: double;
+	
+}
+#img{
+	width: 100%;
+    height: 130px;
+	border-style: single;
+	
+}
+#myElement {
+  float: left;
+  width: 30%;
+  padding: 10px;
+  height: 595px; 
+  border-style: double;
+   position: absolute;
+        }
+.column2{
+ float: right;
+  width: 30%;
+  padding: 10px;
+  height: 595px; 
+    position: absolute;
+  border-style: double;
+   position: absolute;
+	margin-right: -30%;
+	transform: translate(100%, 0%)
+}
+
+#footer{
+width: 98%;
+height: 24px;
+position: fixed;
+bottom: 0px;
+padding: 13px 7px 0px 17px;
+font-size: 13px;
+color: #848484;
+background-color: #F2F2F2;
+border-top: 1px solid #E6E6E6;
+}
+.rights{
+        text-align: left;
+}
+.design{
+       position: absolute;
+       right:0;
+       margin-right: 10px;
+}
